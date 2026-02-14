@@ -3,8 +3,6 @@ from discord.ext import commands
 from discord.ui import View, Button
 import asyncio
 
-TOKEN = "MTM2MjQ2OTg5NjI0NzU3NDY5OQ.Gc11gS.Mz3Skkqyd8f4w-9Pu-UzPM_eKiykGwzGpJ-YEU"
-
 WELCOME_CHANNEL_ID = 1469318139660599307
 TICKET_CATEGORY_ID = 1471232410329813002
 SUPPORT_ROLE_ID = 1471220377974735123
@@ -190,4 +188,6 @@ async def on_ready():
     bot.add_view(TicketViewKZT())
     bot.add_view(CloseTicketView())
 
-bot.run("MTM2MjQ2OTg5NjI0NzU3NDY5OQ.Gc11gS.Mz3Skkqyd8f4w-9Pu-UzPM_eKiykGwzGpJ-YEU")
+import os
+
+bot.run(os.getenv("TOKEN"))
